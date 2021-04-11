@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="trivia quiz" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="alert">
+      <span
+        class="closebtn"
+        onclick="this.parentElement.classList.remove('show');"
+        >&times;</span
+      >
+      <span class="message"
+        ><strong>Danger!</strong> Indicates a dangerous or potentially negative
+        action.</span
+      >
+    </div>
+
+  
+    <section id="settings">
+      <h1>Quiz</h1>
+      <form name="myForm" action="javascript:handleForm();">
+        
+        <label for="difficulty">Choose difficulty: </label>
+        <select name="difficulty" id="difficulty">
+          <option value="any">ANY</option>
+          <option value="easy">EASY</option>
+          <option value="medium">MIDDLE</option>
+          <option value="hard">HARD</option>
+        </select>
+        <input type="submit" value="Commencer" />
+      </form>
+    </section>
+
+    <section id="final">
+        <div id="timeout"><p>TIMEOUT</p></div>
+        Score: <div id="score">
+        </div>
+      <button id="again" class="submit">Try Again</button>
+    </section>
+
+    <section id="quiz">
+      <div id="timeP">Chrono :  
+        <strong><span id="timeSpan"></span></strong>
+      </div>
+
+      <div>
+        <h1 id="question"></h1>
+        RESPONSE :
+        <ul id="choices"></ul>
+        <button>Next</button>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
